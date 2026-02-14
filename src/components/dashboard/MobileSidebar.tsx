@@ -12,8 +12,8 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { Separator } from "@/components/ui/separator"
-import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { SidebarNav } from "./SidebarNav"
+import { UserNav } from "@/components/composite/UserNav"
 import { siteConfig } from "@/lib/constants"
 
 export function MobileSidebar() {
@@ -40,14 +40,8 @@ export function MobileSidebar() {
           <SidebarNav onNavigate={() => setOpen(false)} />
         </div>
         <Separator />
-        <div className="flex items-center gap-3 px-4 py-3">
-          <Avatar className="h-8 w-8">
-            <AvatarFallback className="text-xs">U</AvatarFallback>
-          </Avatar>
-          <div className="flex flex-col">
-            <span className="text-sm font-medium">사용자</span>
-            <span className="text-xs text-muted-foreground">user@example.com</span>
-          </div>
+        <div className="px-1 py-1">
+          <UserNav />
         </div>
       </SheetContent>
     </Sheet>
